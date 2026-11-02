@@ -1,4 +1,4 @@
-# routing_error_taxonomy_10bcbf11
+# gradient_accumulation_batch_error_taxonomy
 
 （大模型推理场景）梯度累积与有效批量的测量噪声主要来自哪里？用路由与负载分布估计噪声水平，并求出结论仍然稳定的最小样本量。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python routing_error_taxonomy_10bcbf11.py --help
-python routing_error_taxonomy_10bcbf11.py --input sample.txt
-python routing_error_taxonomy_10bcbf11.py --input sample.txt --json
+python gradient_accumulation_batch_error_taxonomy.py --help
+python gradient_accumulation_batch_error_taxonomy.py --input sample.txt
+python gradient_accumulation_batch_error_taxonomy.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「失败归类」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python routing_error_taxonomy_10bcbf11.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python routing_error_taxonomy_10bcbf11.py --input sample.txt --json`；
+2. 运行 `python gradient_accumulation_batch_error_taxonomy.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
